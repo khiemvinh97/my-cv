@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyen Vinh Khiem - Frontend Developer CV</title>
+<style>
+  :root {
+    --accent: #a3195b;
+    --accent-light: #f6e3ec;
+    --ink: #24202a;
+    --muted: #6b6470;
+    --sidebar-bg: #faf6f8;
+    --border: #e8dde3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.5;
+  }
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+  @media (max-width: 720px) {
+    .page { grid-template-columns: 1fr; }
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: var(--sidebar-bg);
+    padding: 40px 28px;
+    border-right: 1px solid var(--border);
+  }
+  .sidebar h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 6px;
+  }
+  .sidebar section { margin-bottom: 34px; }
+  .sidebar section:last-child { margin-bottom: 0; }
+
+  .contact-item { margin-bottom: 14px; }
+  .contact-item .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .contact-item .value { font-size: 14px; }
+
+  .info-grid { display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; font-size: 14px; }
+  .info-grid .label { color: var(--muted); }
+
+  .skill-group { margin-bottom: 16px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group h3 {
+    font-size: 12px;
+    color: var(--accent);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  .lang-item { font-size: 14px; }
+
+  /* Main content */
+  .main { padding: 40px 40px 48px; }
+  .header { margin-bottom: 32px; }
+  .header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .header .role {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .main h2.section-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .main section { margin-bottom: 32px; }
+  .main section:last-child { margin-bottom: 0; }
+
+  .about-text { font-size: 14.5px; color: var(--ink); margin: 0; }
+
+  .entry { margin-bottom: 26px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-date { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+  .entry-org { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .entry-title { font-weight: 700; font-size: 14.5px; margin: 8px 0 10px; }
+  .entry-meta { font-size: 13.5px; margin-bottom: 6px; }
+  .entry-meta .meta-label { font-weight: 600; }
+  .entry ul { margin: 8px 0 0; padding-left: 20px; }
+  .entry ul ul { margin-top: 6px; }
+  .entry li { font-size: 13.8px; margin-bottom: 6px; }
+  .entry li:last-child { margin-bottom: 0; }
+  .entry b { font-weight: 700; }
+
+  .edu-school {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin: 6px 0 10px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <section>
+      <h2>Contact Me</h2>
+      <div class="contact-item">
+        <div class="label">Phone</div>
+        <div class="value">+84-935985100</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Mail</div>
+        <div class="value">khiemvinh97@gmail.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Address</div>
+        <div class="value">K457/18 Ha Huy Tap Street, Thanh Khe, Da Nang, Vietnam</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Basic Information</h2>
+      <div class="info-grid">
+        <div class="label">Birthday</div><div>20/10/1997</div>
+        <div class="label">Nationality</div><div>Vietnamese</div>
+        <div class="label">Marital status</div><div>Single</div>
+        <div class="label">Gender</div><div>Male</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>AI Tools</h3>
+        <div class="pill-list">
+          <span class="pill">ChatGPT</span>
+          <span class="pill">Copilot</span>
+          <span class="pill">NotebookLM</span>
+          <span class="pill">Gemini</span>
+          <span class="pill">Claude Code</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="pill-list">
+          <span class="pill">ReactJS</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">VueJS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">Sass</span>
+          <span class="pill">TailwindCSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Backend &amp; Database</h3>
+        <div class="pill-list">
+          <span class="pill">Node.js</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="pill-list">
+          <span class="pill">Team Work</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="lang-item">English</div>
+    </section>
+  </aside>
+
+  <main class="main">
+    <div class="header">
+      <h1>NGUYEN VINH KHIEM</h1>
+      <div class="role">Frontend Developer &middot; 7+ Years Experience</div>
+    </div>
+
+    <section>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        Frontend Developer with 7+ years of experience in crafting interactive and high-performance
+        web applications. Proficient in HTML5, CSS3, JavaScript, and modern frameworks like React and
+        Vue.js. Skilled in applying modern UI frameworks and libraries such as Next.js and Tailwind CSS
+        to deliver polished, production-ready interfaces for real-world projects. Experienced in
+        responsive design, cross-browser compatibility, and optimizing web performance. Adept at
+        collaborating with designers and backend developers to deliver seamless user experiences.
+        Experienced in leveraging AI tools such as GitHub Copilot, Claude Code, ChatGPT, and Gemini
+        throughout the development lifecycle to improve coding efficiency, code quality, and
+        consistency. Passionate about clean code, UI/UX best practices, and continuous learning in
+        fast-paced Agile environments.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-date">09/2016 - 06/2020 (3 years 9 months)</div>
+        <div class="entry-org">Bachelors - Information Technology</div>
+        <div class="edu-school">The University of Da Nang - University of Science and Education</div>
+        <ul><li>Bachelors</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Work History</h2>
+
+      <div class="entry">
+        <div class="entry-date">11/2020 - Present (6 years)</div>
+        <div class="entry-org">Est Rouge United</div>
+        <span class="badge">Frontend Team Lead</span>
+        <div class="entry-title">Frontend Developer (with Fullstack Contributions)</div>
+
+        <div class="entry-meta"><span class="meta-label">Projects:</span> Opela, Streaming Chat, Streaming, ABS Console, Original Life Fair Booking, Flight Analysis Program, ISC Website, Atlas UI, Self-Ticket</div>
+
+        <div class="entry-meta"><span class="meta-label">Technical Skills:</span></div>
+        <ul>
+          <li><b>Languages &amp; Markup:</b> JavaScript, TypeScript, HTML, CSS</li>
+          <li><b>Frameworks &amp; Libraries:</b> React.js, Next.js, Redux, Redux Saga, React Query, Zustand, ahooks, Mapbox, Mithril.js, Node.js, PHP</li>
+          <li><b>Databases:</b> MySQL, PostgreSQL</li>
+        </ul>
+
+        <div class="entry-meta" style="margin-top:12px;"><span class="meta-label">Core Responsibilities:</span></div>
+        <ul>
+          <li><b>Frontend Team Lead</b> &ndash; defined architecture, designed solutions, and set technical direction for successful project delivery.</li>
+          <li>Provided mentorship and training to junior developers, conducted <b>code reviews</b>, and enforced best practices to maintain high development standards.</li>
+          <li>Conducted in-depth technical research to evaluate and recommend optimal tech stacks for new features and projects.</li>
+          <li>Created <b>technical documentation, reports, and proposals</b> to guide decision-making and improve project efficiency.</li>
+          <li>Researched and evaluated <b>GitHub Copilot</b> and <b>Claude</b> to identify practical use cases for AI-assisted development, improving coding efficiency, code quality, and development consistency.</li>
+          <li>Applied AI coding assistants throughout the development lifecycle, including <b>code generation, refactoring, debugging, technical analysis, and code review</b>.</li>
+          <li>Designed AI workflows to maintain consistency with the project's existing architecture, coding standards, and business rules while reducing repetitive development work.</li>
+          <li>Developed and maintained responsive, high-performance user interfaces, transforming UI/UX designs into dynamic web applications.</li>
+          <li>Built Single Page Applications (SPAs) using <b>React.js</b> and <b>Next.js</b>, ensuring smooth and fast user experiences.</li>
+          <li>Collaborated with backend developers to integrate APIs, manage authentication (JWT, OAuth), and ensure seamless data flow.</li>
+          <li>Ensured cross-browser and cross-device compatibility with <b>flexible CSS styling</b> and thorough testing across multiple platforms.</li>
+          <li>Established and maintained a <b>structured, scalable, and maintainable codebase</b>, ensuring long-term stability.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">05/2020 - 10/2020 (5 months)</div>
+        <div class="entry-org">FServingTech Inc.</div>
+        <span class="badge">Frontend Developer</span>
+
+        <div class="entry-meta"><span class="meta-label">Projects:</span> Showroom Project, Karate Project, Diday Estimator</div>
+
+        <div class="entry-meta"><span class="meta-label">Technical Skills:</span></div>
+        <ul>
+          <li><b>Programming/Markup Languages:</b> JavaScript, TypeScript, HTML, CSS</li>
+          <li><b>Frameworks/Libraries:</b> React.js, Redux, Redux Thunk, i18n</li>
+        </ul>
+
+        <div class="entry-meta" style="margin-top:12px;"><span class="meta-label">Core Responsibilities:</span></div>
+        <ul>
+          <li>Designed and implemented core features across multiple projects, ensuring responsive and user-friendly interfaces.</li>
+          <li>Established and managed the initial codebase, creating a scalable and maintainable architecture for long-term development.</li>
+          <li>Developed high-performance, interactive UI components using React.js and optimized state management with Redux and Redux Thunk.</li>
+          <li>Integrated multilingual support using i18n, ensuring seamless localization for global users.</li>
+          <li>Conducted thorough code reviews to maintain high coding standards, improve performance, and ensure code quality.</li>
+          <li>Collaborated closely with backend teams to integrate APIs and deliver a smooth user experience.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">11/2019 - 04/2020 (5 months)</div>
+        <div class="entry-org">Sun Asterisk Inc.</div>
+        <span class="badge">Intern Frontend Developer</span>
+
+        <div class="entry-meta"><span class="meta-label">Project:</span> Mechanic Store</div>
+
+        <div class="entry-meta"><span class="meta-label">Technical Skills:</span></div>
+        <ul>
+          <li><b>Languages &amp; Markup:</b> JavaScript, HTML, CSS</li>
+          <li><b>Frameworks &amp; Libraries:</b> React.js, Redux, Redux Thunk, i18n</li>
+        </ul>
+
+        <div class="entry-meta" style="margin-top:12px;"><span class="meta-label">Core Responsibilities:</span></div>
+        <ul>
+          <li>Designed and implemented critical features to deliver a responsive and user-friendly interface.</li>
+          <li>Established a well-structured and maintainable initial codebase to streamline future development.</li>
+          <li>Collaborated closely with the team to ensure high-quality code and adherence to best practices in React and Redux.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
